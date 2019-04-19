@@ -32,4 +32,8 @@ class UserRepository {
   Future<String> getUser() async {
     return (await _auth.currentUser()).displayName;
   }
+
+  Future<FirebaseUser> getUserInfo() async {
+    return await _auth.currentUser();
+  }
 }

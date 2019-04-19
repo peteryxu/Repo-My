@@ -22,8 +22,11 @@ class AuthenticationBloc
       yield* _mapAppStartedToState();
     }
     if (event is Login) {
-      final name = await _userRepository.getUser();
-      yield Authenticated(name);
+      /* final name = await _userRepository.getUser();
+      yield Authenticated(name); */
+     final userInfo= await _userRepository.getUserInfo();
+      yield Authenticated(userInfo);
+      
     }
     if (event is Logout) {
       yield* _mapLogoutToState();
@@ -34,8 +37,11 @@ class AuthenticationBloc
     try {
       final isSignedIn = await _userRepository.isSignedIn();
       if (isSignedIn) {
-        final name = await _userRepository.getUser();
-        yield Authenticated(name);
+        /* final name = await _userRepository.getUser();
+        yield Authenticated(name); */
+      final userInfo= await _userRepository.getUserInfo();
+      yield Authenticated(userInfo);
+
       } else {
         yield Unauthenticated();
       }

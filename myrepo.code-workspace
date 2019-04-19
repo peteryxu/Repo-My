@@ -5,10 +5,6 @@
 		},
 		{
 			"path": "BaseShell-noAuth"
-		},
-		{
-			"name": "Repo-My",
-			"path": "."
 		}
 	],
 	"settings": {}
