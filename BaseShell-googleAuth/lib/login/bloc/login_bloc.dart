@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:baseshell_googleauth/login/login.dart';
-import 'package:baseshell_googleauth/authentication/authentication.dart';
+import '../../appshare/appshare.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   UserRepository _userRepository;

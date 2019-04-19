@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:baseshell_googleauth/authentication/authentication.dart';
+import './authentication_event.dart';
+import './authentication_state.dart';
+import '../user_repository/user_repository.dart';
 
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {

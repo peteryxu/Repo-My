@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './home/home.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import './authentication/bloc/bloc.dart';
+import './appshare.dart';
 
 class DrawerOnly extends StatelessWidget {
   @override
@@ -19,17 +19,14 @@ class DrawerOnly extends StatelessWidget {
               title: new Text("Home"),
               onTap: () {
                 Navigator.pop(ctxt);
-                Navigator.push(ctxt,
-                    //new MaterialPageRoute(builder: (ctxt) => HomeScreen(user: null,)));
-                    new MaterialPageRoute(builder: (ctxt) => HomeScreen()));
+                Navigator.pushNamed(ctxt, AppRoutes.home);
               },
             ),
             new ListTile(
               title: new Text("Settings"),
               onTap: () {
                 Navigator.pop(ctxt);
-                Navigator.push(ctxt,
-                    new MaterialPageRoute(builder: (ctxt) => HomeScreen()));
+                Navigator.pushNamed(ctxt, AppRoutes.home);
               },
             ),
             Center(

@@ -1,0 +1,1 @@
+enum AppTab { tab1, tab2, tab3 }

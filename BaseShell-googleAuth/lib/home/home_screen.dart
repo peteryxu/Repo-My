@@ -4,10 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 //import './bloc/bloc.dart';
 import './tabs/tabs.dart';
-import '../widgets.dart';
-
-
-import 'package:baseshell_googleauth/authentication/authentication.dart';
+import '../appshare/appshare.dart';
 
 /* class HomeScreen extends StatelessWidget {
   final String name;
